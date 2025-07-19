@@ -693,3 +693,80 @@ body {
         padding-bottom: 25px;
     }
 } 
+
+@media (max-width: 600px) {
+    .file-explorer {
+        width: 100vw;
+        height: 100vh;
+        min-width: 0;
+        min-height: 0;
+        border-radius: 0;
+    }
+    .content-area {
+        flex-direction: column;
+    }
+    .left-panel {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #000;
+        min-width: 0;
+    }
+    .right-panel {
+        width: 100%;
+        min-width: 0;
+        flex: 1;
+    }
+    .file-list {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        padding: 4px;
+        gap: 4px;
+    }
+    .file-item {
+        font-size: 13px;
+        min-height: 60px;
+        padding: 6px;
+    }
+    .file-item i {
+        font-size: 28px;
+    }
+    .title-bar, .menu-bar, .toolbar, .status-bar {
+        font-size: 14px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .toolbar-button, .title-bar-button, .modal-close {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+    .modal-content {
+        width: 98vw;
+        max-width: 98vw;
+        max-height: 98vh;
+        min-width: 0;
+        min-height: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+    .modal-body {
+        font-size: 14px;
+        padding: 8px;
+        margin: 4px;
+    }
+    .panel-header {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+    .address-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        padding: 4px;
+    }
+    .address-label, .address-input {
+        font-size: 13px;
+    }
+    .menu-bar {
+        overflow-x: auto;
+    }
+} 
