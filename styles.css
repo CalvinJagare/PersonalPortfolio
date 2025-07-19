@@ -735,13 +735,13 @@ body {
         height: calc(100vh - 120px); /* leave space for bars */
     }
     .left-panel {
-        width: 90px;
-        min-width: 60px;
-        max-width: 120px;
+        width: 110px;
+        min-width: 90px;
+        max-width: 140px;
         font-size: 10px;
     }
     .right-panel {
-        width: calc(100vw - 90px);
+        width: calc(100vw - 110px);
         min-width: 0;
         flex: 1;
         font-size: 11px;
@@ -752,17 +752,17 @@ body {
         flex: 1;
         padding: 2px;
         gap: 2px;
-        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
         overflow-y: auto;
         max-height: 60vh;
     }
     .file-item {
-        font-size: 10px;
-        min-height: 40px;
-        padding: 4px;
+        font-size: 9px;
+        min-height: 32px;
+        padding: 2px;
     }
     .file-item i {
-        font-size: 18px;
+        font-size: 15px;
     }
     .toolbar-button, .title-bar-button, .modal-close {
         width: 20px;
