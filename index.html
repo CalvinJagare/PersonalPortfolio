@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - File Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+    <div class="file-explorer">
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <div class="title-bar-left">
+                <div class="title-bar-icon">
+                    <i class="fas fa-folder-open"></i>
+                </div>
+                <div class="title-bar-text">Portfolio Explorer</div>
+            </div>
+            <div class="title-bar-right">
+                <div class="title-bar-button minimize">
+                    <i class="fas fa-minus"></i>
+                </div>
+                <div class="title-bar-button maximize">
+                    <i class="fas fa-square"></i>
+                </div>
+                <div class="title-bar-button close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Bar -->
+        <div class="menu-bar">
+            <div class="menu-item">File</div>
+            <div class="menu-item">Edit</div>
+            <div class="menu-item">View</div>
+            <div class="menu-item">Help</div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <div class="toolbar-button">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="toolbar-button">
+                <i class="fas fa-folder"></i>
+            </div>
+            <div class="toolbar-button">
+                <i class="fas fa-cut"></i>
+            </div>
+            <div class="toolbar-button">
+                <i class="fas fa-copy"></i>
+            </div>
+            <div class="toolbar-button">
+                <i class="fas fa-paste"></i>
+            </div>
+            <div class="toolbar-separator"></div>
+            <div class="toolbar-button">
+                <i class="fas fa-undo"></i>
+            </div>
+            <div class="toolbar-button">
+                <i class="fas fa-redo"></i>
+            </div>
+        </div>
+
+        <!-- Address Bar -->
+        <div class="address-bar">
+            <div class="address-label">Address:</div>
+            <div class="address-input">C:\CalvinJagare\Portfolio\</div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <!-- Left Panel - Folder Tree -->
+            <div class="left-panel">
+                <div class="panel-header">Folders</div>
+                <div class="folder-tree">
+                    <div class="folder-item main-folder active" data-folder="portfolio">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Portfolio</span>
+                    </div>
+                    <div class="folder-item sub-folder" data-folder="about">
+                        <i class="fas fa-folder"></i>
+                        <span>├─ About Me</span>
+                    </div>
+                    <div class="folder-item sub-folder" data-folder="projects">
+                        <i class="fas fa-folder"></i>
+                        <span>├─ Projects</span>
+                    </div>
+                    <div class="folder-item sub-folder" data-folder="skills">
+                        <i class="fas fa-folder"></i>
+                        <span>├─ Skills</span>
+                    </div>
+                    <div class="folder-item sub-folder" data-folder="experience">
+                        <i class="fas fa-folder"></i>
+                        <span>├─ Experience</span>
+                    </div>
+                    <div class="folder-item sub-folder" data-folder="contact">
+                        <i class="fas fa-folder"></i>
+                        <span>└─ Contact</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - File List -->
+            <div class="right-panel">
+                <div class="panel-header">Contents of Portfolio</div>
+                <div class="file-list" id="fileList">
+                    <!-- Files will be dynamically loaded based on selected folder -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">5 objects</div>
+            <div class="status-right">Ready</div>
+        </div>
+    </div>
+
+    <!-- File Content Modal -->
+    <div class="modal" id="fileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle">File Content</div>
+                <div class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="sounds/audio.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Windows Taskbar -->
+    <div class="taskbar">
+        <div class="taskbar-windows">
+            Portfolio Explorer
+        </div>
+        <div class="taskbar-time" id="taskbarTime">
+            12:00 PM
+        </div>
+        <div class="taskbar-sound-toggle" id="soundToggle" title="Toggle Sounds">
+            🔊
+        </div>
+    </div>
+</body>
+</html> 
