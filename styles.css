@@ -695,15 +695,38 @@ body {
 } 
 
 @media (max-width: 600px) {
+    body {
+        display: block;
+        padding: 0;
+        min-height: 100vh;
+        background: #008080;
+    }
     .file-explorer {
         width: 100vw;
-        height: 100vh;
         min-width: 0;
-        min-height: 0;
+        height: auto;
+        min-height: 100vh;
+        margin: 0;
+        border: 1px solid #222;
+        box-shadow: none;
         border-radius: 0;
+    }
+    .title-bar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-radius: 0;
+        box-shadow: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .menu-bar, .toolbar, .status-bar {
+        border-radius: 0;
+        box-shadow: none;
     }
     .content-area {
         flex-direction: column;
+        min-height: 0;
     }
     .left-panel {
         width: 100%;
