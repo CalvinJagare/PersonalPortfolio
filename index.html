@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background">
+        <div class="grid-overlay"></div>
+        <canvas id="particles"></canvas>
+    </div>
+
+    <header class="header" id="header">
+        <div class="header-content">
+            <div class="glitch-wrapper">
+                <h1 class="name-title">
+                    <span class="letter" data-letter="C">C</span>
+                    <span class="letter" data-letter="a">a</span>
+                    <span class="letter" data-letter="l">l</span>
+                    <span class="letter" data-letter="v">v</span>
+                    <span class="letter" data-letter="i">i</span>
+                    <span class="letter" data-letter="n">n</span>
+                    <span class="letter" data-letter=" "> </span>
+                    <span class="letter" data-letter="J">J</span>
+                    <span class="letter" data-letter="ä">ä</span>
+                    <span class="letter" data-letter="g">g</span>
+                    <span class="letter" data-letter="a">a</span>
+                    <span class="letter" data-letter="r">r</span>
+                    <span class="letter" data-letter="e">e</span>
+                </h1>
+            </div>
+            <p class="role">
+                <span class="code-bracket">&lt; </span>
+                <span class="role-text">Full-Stack Developer</span>
+                <span class="code-bracket">/ &gt;</span>
+            </p>
+            <p class="tagline">// TODO: Write a better tagline</p>
+
+            <nav class="nav-grid">
+                <button class="nav-btn" data-section="about">
+                    <span class="nav-text">About</span>
+                </button>
+                <button class="nav-btn" data-section="experience">
+                    <span class="nav-text">Experience</span>
+                </button>
+                <button class="nav-btn" data-section="work">
+                    <span class="nav-text">Work</span>
+                </button>
+                <button class="nav-btn" data-section="skills">
+                    <span class="nav-text">Skills</span>
+                </button>
+                <button class="nav-btn" data-section="contact">
+                    <span class="nav-text">Contact</span>
+                </button>
+            </nav>
+        </div>
+
+        <div class="scroll-hint">
+            <span>Scroll or Click Above</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section" id="about">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">About_Me</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-title">profile.js</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="code-line"><span class="code-keyword">const</span> developer = {</p>
+                            <p class="code-line indent">name: <span class="code-string">"Calvin Jägare"</span>,</p>
+                            <p class="code-line indent">role: <span class="code-string">"Full-Stack Developer"</span>,</p>
+                            <p class="code-line indent">passion: <span class="code-string">"Turning ideas into reality"</span>,</p>
+                            <p class="code-line indent">location: <span class="code-string">"Sweden"</span>,</p>
+                            <p class="code-line">};</p>
+                        </div>
+                    </div>
+
+                    <div class="about-card glass-card">
+                        <h3 class="card-title">Who I Am</h3>
+                        <p>I'm a full-stack developer who loves turning ideas into working solutions. I enjoy owning projects from the beginning, designing APIs, building data flows, creating interfaces that make sense. But I'm equally comfortable diving into existing projects to solve problems and improve what's already there.</p>
+                        <p>I thrive whether I'm collaborating with a team or working through challenges solo. My foundation is in C# and .NET, but I'm also experienced in the full stack you'll see below, Blazor, React, Python, Azure, and more. Beyond that, I'm always exploring Unity and other frameworks that aren't in my main stack yet. For me, great software is about balancing clean code with real-world value. I like solving puzzles, and code is the best kind of puzzle there is.</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Years</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Ideas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="work">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">Featured_Work</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-number">01</div>
+                        <div class="project-content">
+                            <h3 class="project-title">B2B Sales & Order Management Portal</h3>
+                            <p class="project-desc">Full-stack customer portal with quote approval workflows, payment processing via Zaver, and real-time seller collaboration. Integrated Scrive for digital contract signing and built comprehensive order tracking with change request management.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Blazor</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">Entity Framework</span>
+                                <span class="tech-tag">Zaver API</span>
+                                <span class="tech-tag">Scrive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-number">02</div>
+                        <div class="project-content">
+                            <h3 class="project-title">Dynamic Product Recommendation System</h3>
+                            <p class="project-desc">Intelligent matching engine that recommends optimal product combinations from multiple suppliers based on specifications and budget. Built PDF catalog parser with auto-import, duplicate detection, and dynamic package pricing optimization.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">PDF Processing</span>
+                                <span class="tech-tag">Algorithm Design</span>
+                                <span class="tech-tag">Entity Framework</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-number">03</div>
+                        <div class="project-content">
+                            <h3 class="project-title">KPI Performance Analytics System</h3>
+                            <p class="project-desc">Comprehensive performance tracking platform for research teams analyzing work output, quality metrics, and wellbeing indicators. Built automated data pipelines with Power Automate and created interactive dashboards to identify performance trends and outliers.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">Power Automate</span>
+                                <span class="tech-tag">Azure</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Microsoft Forms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="experience">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">Work_Experience</h2>
+                </div>
+
+                <div class="companies-grid">
+                    <div class="company-logo">
+                        <img src="Snek.png" alt="Snek">
+                    </div>
+                    <div class="company-logo">
+                        <img src="LTU.jpg" alt="LTU">
+                    </div>
+                    <div class="company-logo">
+                        <img src="AiFactory.jpg" alt="AiFactory">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="skills">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">Tech_Stack</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="category-title">Frontend</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">Blazor</div>
+                            <div class="skill-item">WPF</div>
+                            <div class="skill-item">WinForms</div>
+                            <div class="skill-item">MAUI</div>
+                            <div class="skill-item">React</div>
+                            <div class="skill-item">Angular</div>
+                            <div class="skill-item">HTML/CSS/JavaScript</div>
+                            <div class="skill-item">Bootstrap</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="category-title">Backend</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">C#/.NET</div>
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">Java</div>
+                            <div class="skill-item">ASP.NET Core</div>
+                            <div class="skill-item">REST APIs</div>
+                            <div class="skill-item">Entity Framework</div>
+                            <div class="skill-item">SQL Server</div>
+                            <div class="skill-item">Azure</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="category-title">DevOps & Design</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">Git/GitHub</div>
+                            <div class="skill-item">Power BI</div>
+                            <div class="skill-item">Power Automate</div>
+                            <div class="skill-item">Database Design</div>
+                            <div class="skill-item">Algorithm Design</div>
+                            <div class="skill-item">CI/CD</div>
+                            <div class="skill-item">Unit Testing</div>
+                            <div class="skill-item">Docker</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="contact">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">Get_In_Touch</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 class="contact-heading">Let's build something amazing</h3>
+                        <p class="contact-text">Got a project in mind? Want to collaborate? Or just want to chat about tech? I'm always down to connect.</p>
+
+                        <div class="contact-methods">
+                            <a href="mailto:jagarecalvin@gmail.com" class="contact-method">
+                                <span class="method-icon">📧</span>
+                                <div class="method-content">
+                                    <span class="method-label">Email</span>
+                                    <span class="method-value">jagarecalvin@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/CalvinJagare" class="contact-method" target="_blank">
+                                <span class="method-icon">💻</span>
+                                <div class="method-content">
+                                    <span class="method-label">GitHub</span>
+                                    <span class="method-value">github.com/CalvinJagare</span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/calvin-jägare" class="contact-method" target="_blank">
+                                <span class="method-icon">💼</span>
+                                <div class="method-content">
+                                    <span class="method-label">LinkedIn</span>
+                                    <span class="method-value">linkedin.com/in/calvin-jägare</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" action="https://formspree.io/f/mjkzlpjk" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-input" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-input" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-input" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <span class="button-text">Send Message</span>
+                            <span class="button-glow"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <button class="back-to-top" id="backToTop">
+            <span>↑</span>
+        </button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
