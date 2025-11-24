@@ -1,4 +1,3 @@
-// Particle Canvas Animation
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 
@@ -50,7 +49,6 @@ function animateParticles() {
         particle.draw();
     });
 
-    // Draw connections
     particles.forEach((particleA, indexA) => {
         particles.slice(indexA + 1).forEach(particleB => {
             const dx = particleA.x - particleB.x;
@@ -79,10 +77,6 @@ window.addEventListener('resize', () => {
 initParticles();
 animateParticles();
 
-// Header stays centered, no hide animation needed
-// Content naturally covers it as you scroll due to z-index layering
-
-// Navigation button functionality
 const navButtons = document.querySelectorAll('.nav-btn');
 navButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -95,7 +89,6 @@ navButtons.forEach(button => {
     });
 });
 
-// Back to top button
 const backToTopButton = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
@@ -113,7 +106,6 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
-// Enhanced letter hover effects (faster response)
 document.querySelectorAll('.letter').forEach(letter => {
     letter.addEventListener('mouseenter', function() {
         this.style.transition = 'all 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
@@ -124,7 +116,6 @@ document.querySelectorAll('.letter').forEach(letter => {
     });
 });
 
-// Intersection Observer for scroll animations
 const observerOptions = {
     threshold: 0.15,
     rootMargin: '0px 0px -100px 0px'
@@ -141,7 +132,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all cards and elements (but NOT the first about section to avoid jump)
 document.querySelectorAll('.stat-card, .project-card, .skill-category').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
@@ -149,14 +139,12 @@ document.querySelectorAll('.stat-card, .project-card, .skill-category').forEach(
     observer.observe(el);
 });
 
-// About cards and contact get subtle fade only
 document.querySelectorAll('.about-card, .contact-grid').forEach(el => {
     el.style.opacity = '0';
     el.style.transition = 'opacity 0.8s ease';
     observer.observe(el);
 });
 
-// Form submission handler
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -180,13 +168,11 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                // Success message
                 submitButton.querySelector('.button-text').textContent = 'Sent! ✓';
                 submitButton.style.borderColor = '#10b981';
                 submitButton.style.boxShadow = '0 0 30px rgba(16, 185, 129, 0.4)';
                 contactForm.reset();
 
-                // Reset after 3 seconds
                 setTimeout(() => {
                     submitButton.querySelector('.button-text').textContent = originalText;
                     submitButton.style.borderColor = '';
@@ -197,7 +183,6 @@ if (contactForm) {
                 throw new Error('Form submission failed');
             }
         } catch (error) {
-            // Error message
             submitButton.querySelector('.button-text').textContent = 'Error! Try again';
             submitButton.style.borderColor = '#ef4444';
             submitButton.style.boxShadow = '0 0 30px rgba(239, 68, 68, 0.4)';
@@ -212,7 +197,6 @@ if (contactForm) {
     });
 }
 
-// Add hover effect to skill items
 document.querySelectorAll('.skill-item').forEach(item => {
     item.addEventListener('mouseenter', function() {
         this.style.transform = 'translateX(10px)';
@@ -223,7 +207,6 @@ document.querySelectorAll('.skill-item').forEach(item => {
     });
 });
 
-// Add glow effect on stat cards
 document.querySelectorAll('.stat-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         const number = this.querySelector('.stat-number');
@@ -236,7 +219,6 @@ document.querySelectorAll('.stat-card').forEach(card => {
     });
 });
 
-// Terminal typing effect (optional enhancement)
 const terminalBody = document.querySelector('.terminal-body');
 if (terminalBody) {
     const codeLines = terminalBody.querySelectorAll('.code-line');
@@ -252,7 +234,6 @@ if (terminalBody) {
     });
 }
 
-// Smooth scroll for project links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -266,7 +247,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add ripple effect to navigation buttons
 navButtons.forEach(button => {
     button.addEventListener('click', function(e) {
         const ripple = document.createElement('span');
@@ -293,7 +273,6 @@ navButtons.forEach(button => {
     });
 });
 
-// Add CSS animation for ripple
 const style = document.createElement('style');
 style.textContent = `
     @keyframes ripple {
@@ -305,11 +284,10 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Random glitch effect on name (subtle, occasional)
 const nameTitle = document.querySelector('.name-title');
 if (nameTitle) {
     setInterval(() => {
-        if (Math.random() > 0.95) { // 5% chance every interval
+        if (Math.random() > 0.95) { 
             nameTitle.style.textShadow = '2px 2px #ff00de, -2px -2px #00fff9';
             setTimeout(() => {
                 nameTitle.style.textShadow = 'none';
