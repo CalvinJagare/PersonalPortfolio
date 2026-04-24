@@ -28,12 +28,10 @@ body {
 a { color: inherit; text-decoration: none; }
 ::selection { background: var(--amber); color: var(--bg); }
 
-/* ── SCROLLBAR ─────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--panel); }
 ::-webkit-scrollbar-thumb { background: var(--hair); }
 
-/* ── SIDE RAIL ─────────────────────────── */
 #rail {
   position: fixed; left: 0; top: 0; bottom: 0; width: 44px;
   background: var(--panel); border-right: 1px solid var(--hair);
@@ -62,7 +60,6 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
 }
 
-/* ── TOP BAR ───────────────────────────── */
 #topbar {
   position: fixed; top: 0; left: 44px; right: 0; height: 32px;
   background: var(--panel); border-bottom: 1px solid var(--hair);
@@ -75,7 +72,6 @@ a { color: inherit; text-decoration: none; }
 #tb-pct { color: var(--green); min-width: 44px; }
 #tb-time { margin-left: auto; }
 
-/* ── LAYOUT ────────────────────────────── */
 main { margin-left: 44px; padding-top: 32px; }
 section {
   padding: 64px 60px;
@@ -84,7 +80,6 @@ section {
 }
 #s-hero { min-height: 100vh; }
 
-/* ── SECTION HEADER ────────────────────── */
 .sec-label {
   font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
   color: var(--muted); margin-bottom: 8px; display: flex; align-items: center; gap: 12px;
@@ -97,7 +92,6 @@ section {
   line-height: 1.05; margin-bottom: 22px; font-style: italic;
 }
 
-/* ── HERO ──────────────────────────────── */
 #s-hero { display: flex; flex-direction: column; justify-content: center; min-height: 100vh; padding-top: 80px; }
 #boot-log { font-size: 12px; line-height: 1.7; margin-bottom: 32px; }
 .blog-line { display: flex; gap: 10px; }
@@ -142,7 +136,6 @@ section {
   animation: blink .9s step-end infinite;
 }
 
-/* ── ABOUT ─────────────────────────────── */
 #s-about { display: grid; grid-template-columns: 1fr 320px; gap: 60px; align-items: start; }
 #profile-code {
   background: var(--panel); border: 1px solid var(--hair);
@@ -164,7 +157,6 @@ section {
 .stat-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 12px; padding: 3px 0; }
 .stat-n { font-size: 22px; color: var(--amber); line-height: 1; font-family: var(--serif); font-style: italic; }
 
-/* ── WORK ──────────────────────────────── */
 .project-card {
   border: 1px solid var(--hair); background: var(--panel);
   margin-bottom: 14px; overflow: hidden;
@@ -204,7 +196,6 @@ section {
 .metric-v { color: var(--amber); font-size: 16px; font-family: var(--serif); font-style: italic; text-align: right; }
 .pc-arch { margin-top: 10px; }
 
-/* ── EXPERIENCE ────────────────────────── */
 #exp-logos {
   display: flex; flex-wrap: wrap; align-items: center;
   gap: 48px; margin-bottom: 36px;
@@ -256,7 +247,6 @@ section {
 .ge-commit.done { color: var(--ink); }
 .ge-commit.done::before { content: '✓'; color: var(--green); }
 
-/* ── SKILLS ────────────────────────────── */
 #skills-tabs { display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 28px; }
 .sk-tab {
   padding: 6px 18px; border: 1px solid var(--hair);
@@ -282,7 +272,6 @@ section {
 }
 .skill-pct { font-size: 11px; color: var(--muted); text-align: right; }
 
-/* ── CONTACT ──────────────────────────── */
 #s-contact { display: grid; grid-template-columns: 1fr 360px; gap: 60px; }
 #socket-log { margin-bottom: 28px; }
 .sl-line { opacity: 0; transform: translateY(4px); transition: opacity .35s, transform .35s; }
@@ -316,7 +305,6 @@ section {
 .ct-v a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; transition: border-color .2s; }
 .ct-v a:hover { border-color: var(--amber); }
 
-/* ── FOOTER ───────────────────────────── */
 footer {
   margin-left: 44px; padding: 28px 60px;
   border-top: 1px solid var(--hair);
@@ -325,7 +313,6 @@ footer {
   font-size: 11px; color: var(--muted);
 }
 
-/* ── RESPONSIVE ───────────────────────── */
 @media (max-width: 900px) {
   section { padding: 60px 28px; }
   footer { padding: 20px 28px; }
